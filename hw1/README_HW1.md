@@ -1,6 +1,6 @@
-#CSCE 625 AI 19 Sp 
+# CSCE 625 AI 19 Sp 
 
-#HW1 Search, BFS, Lazy Evalution
+# HW1 Search, BFS, Lazy Evalution
 
 Tianqi Li
 
@@ -8,7 +8,7 @@ Tianqi Li
 
 UIN: 926000933
 
-##	Task 1
+## Task 1
 
 Please check and run file `hw1_task1_Tianqi.scm`
 
