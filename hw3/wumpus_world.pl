@@ -545,7 +545,7 @@ update_agent_health.
 
 get_the_gold :-
   agent_location(X,Y),
-  gold(X,Y), !,                   % there's gold in this square!
+  gold(X,Y), !,                   % there s gold in this square!
   agent_gold(NGold),              %   add to agents loot
   NGold1 is NGold + 1,
   retract(agent_gold(NGold)),
