@@ -113,7 +113,7 @@ run_agent_trial(NumActions,Percept,Time) :-
 %WN
 %  statistics(runtime,[T1|_]),
   statistics(cputime,T1),
-
+  format('[~w, ~w, ~w, ~w, ~w]', Percept),
 %WN
   run_agent(Percept,Action),          % needs to be defined externally
 %WN
