@@ -22,31 +22,78 @@ All possible scenario are listed below
 
 ##### 1. you are certain there is only one possible location for Wumpus by using 'safelocastion'
 
-<pre>
+```
 |     |  X  |     |
 --------------------
 |     |  ^  |     |
 --------------------
 |     |     |     |
-<\pre>
 
 
-<pre>
 |     |     |     |
 --------------------
 |  X  |  ^  |     |
 --------------------
 |     |     |     |
-<\pre>
 
-<pre>
+
 |     |     |     |
 --------------------
 |     |  ^  |  X  |
 --------------------
 |     |     |     |
-<\pre>
+```
 
 The following action is just adjust the orientation and shoot the arrow.
 
 ##### 2. there are more than Wumpus
+
+```
+|     |  X  |     |
+--------------------
+|  X  |  ^  |     |
+--------------------
+|  A  |     |     |
+
+
+|     |     |     |
+--------------------
+|  X  |  ^  |  X  |
+--------------------
+|  A  |     |     |
+
+
+|     |  X  |     |
+--------------------
+|     |  ^  |  X  |
+--------------------
+|     |     |  A  |
+
+|     |  X  |     |
+--------------------
+|  X  |  ^  |  X  |
+--------------------
+|  A  |     |  B  |
+
+
+```
+
+We cannot determine the place unless we check cell A first, and for the situation there are 3 cells to check, we also need to go B, then we can determin the location of Wumpus and kill it.
+
+#### 4 Go back to start point
+
+The time point of deciding to go back to start cell are
+a. The agent get a gold
+b. The agent has used enough actions, I use 
+
+M =  Manhattan distance of the agent's location to start point (1,1) + number of actions used > Maximum num of actions (128)
+
+to determine the point to go back.
+
+When it is going back, the agent will just follow the 'safeloation' marked cells, and try to face toward (1,1) as possible.
+
+When (1,1) is reached, climb out and it's done.
+
+### Sum:
+
+I didn't fully utilize the functions in Prolog, anyway this is an exhaustive method to do the logical inference.....
